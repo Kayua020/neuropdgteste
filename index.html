@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f7ff">
+    <meta name="description"
+        content="Gisele Geremias — Psicopedagogia e Neuropsicopedagogia para crianças, adolescentes e adultos em Palhoça, SC.">
+    <title>GiseleNeuropdg | Psicopedagogia e Neuropsicopedagogia</title>
+    <style>
+        :root {
+            --paper: #f7f7ff;
+            --white: #fff;
+            --ink: #17171b;
+            --muted: #5c5b64;
+            --wine: #9b526c;
+            --wine-dark: #1d9e11;
+            --line: #dedde8;
+            --soft: #efedf6;
+            --shadow: 0 18px 55px rgba(35, 26, 45, .08);
+            --serif: Georgia, "Times New Roman", serif;
+            --sans: Arial, Helvetica, sans-serif
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: var(--sans);
+            line-height: 1.65
+        }
+
+        a {
+            color: inherit
+        }
+
+        .wrap {
+            width: min(1120px, calc(100% - 40px));
+            margin: auto
+        }
+
+        header {
+            padding: 22px 0;
+            border-bottom: 1px solid var(--line);
+            background: rgba(247, 247, 255, .94)
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px
+        }
+
+        .brand {
+            font-family: var(--serif);
+            font-size: 1.55rem;
+            letter-spacing: .06em;
+            text-decoration: none
+        }
+
+        .brand span {
+            color: var(--wine)
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: .92rem;
+            color: #42414a
+        }
+
+        nav a:hover {
+            color: var(--wine)
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            background: var(--wine);
+            color: white;
+            text-decoration: none;
+            border: 1px solid var(--wine);
+            border-radius: 999px;
+            padding: 13px 22px;
+            font-weight: 600;
+            transition: .2s
+        }
+
+        .btn:hover {
+            background: var(--wine-dark);
+            transform: translateY(-1px)
+        }
+
+        /* SOMENTE o botão "Fale comigo pelo WhatsApp" */
+        .btn.whatsapp {
+            background: #25D366;
+            border-color: #25D366;
+            color: #ffffff;
+        }
+
+        .btn.whatsapp:hover {
+            background: #1ebe5d;
+            border-color: #1ebe5d;
+            color: #ffffff;
+        }
+.whatsapp-float {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #fff;
+            display: grid;
+            place-items: center;
+            text-decoration: none;
+            font-size: 27px;
+            font-weight: 700;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+            z-index: 1000;
+            transition: transform .2s ease, background .2s ease;
+        }
+
+        .whatsapp-float:hover {
+            background: #1ebe5d;
+            transform: translateY(-3px) scale(1.04);
+        }
+
+        .whatsapp-float span {
+            line-height: 1;
+        }
+
+        .btn.outline {
+            background: transparent;
+            color: var(--wine)
+        }
+
+        .btn.outline:hover {
+            background: #f0e7ec
+        }
+
+        .hero {
+            min-height: 531px;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1.08fr .92fr;
+            gap: 58px;
+            align-items: center
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: .19em;
+            font-size: .75rem;
+            font-weight: 700;
+            color: var(--wine)
+        }
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.15;
+            margin: 0 0 20px
+        }
+
+        h1 {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: clamp(3rem, 6vw, 5.2rem);
+            letter-spacing: -.04em
+        }
+
+        h1 em {
+            font-style: normal;
+            color: var(--wine)
+        }
+
+        .hero p {
+            font-size: 1.13rem;
+            color: var(--muted);
+            max-width: 570px;
+            margin: 0 0 27px
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .hero-art {
+            min-height: 378px;
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 46% 46% 20px 20px/34% 34% 20px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            padding: 30px
+        }
+
+        .hero-art img {
+            max-width: 80%;
+            max-height: 300px;
+            object-fit: contain;
+            display: block;
+            z-index: 1
+        }
+
+        section {
+            padding: 78px 0
+        }
+
+        .section-head {
+            max-width: 700px;
+            margin-bottom: 36px
+        }
+
+        .section-head h2 {
+            font: 400 clamp(2.2rem, 4vw, 3.3rem) var(--serif);
+            letter-spacing: -.025em
+        }
+
+        .section-head p {
+            color: var(--muted);
+            margin: 0
+        }
+
+        .about {
+            background: #fff;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            gap: 55px;
+            align-items: start
+        }
+
+        .portrait-card {
+            background: var(--soft);
+            border-radius: 18px;
+            padding: 24px;
+            text-align: center;
+            color: var(--wine)
+        }
+
+        .portrait-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block;
+            object-fit: cover
+        }
+
+        .portrait-card p {
+            font: 1.2rem var(--serif);
+            margin: 15px 0 0
+        }
+
+        .about-copy h2 {
+            font: 400 clamp(2.1rem, 4vw, 3rem) var(--serif)
+        }
+
+        .about-copy p {
+            color: var(--muted)
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-top: 22px
+        }
+
+        .pill {
+            border: 1px solid var(--line);
+            border-radius: 99px;
+            padding: 7px 12px;
+            font-size: .82rem;
+            color: #5a4650;
+            background: var(--paper)
+        }
+
+        .services {
+            background: var(--paper)
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px
+        }
+
+        .service-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 27px 28px;
+            box-shadow: 0 8px 25px rgba(35, 26, 45, .035)
+        }
+
+        .service-card h3 {
+            font: 400 1.8rem var(--serif);
+            color: var(--wine);
+            margin-bottom: 8px
+        }
+
+        .service-card>p {
+            color: var(--muted);
+            font-size: .95rem;
+            margin: 0 0 18px
+        }
+
+        .service-card details {
+            border-top: 1px solid var(--line);
+            padding: 13px 0
+        }
+
+        .service-card summary {
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            gap: 12px
+        }
+
+        .service-card summary::-webkit-details-marker {
+            display: none
+        }
+
+        .service-card summary:after {
+            content: "+";
+            font-size: 1.25rem;
+            color: var(--wine)
+        }
+
+        .service-card details[open] summary:after {
+            content: "−"
+        }
+
+        .service-card details p {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: .93rem
+        }
+
+        .approach {
+            background: #eeeaf3
+        }
+
+        .approach-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center
+        }
+
+        .approach h2 {
+            font: 400 clamp(2rem, 4vw, 3rem) var(--serif)
+        }
+
+        .approach p {
+            color: var(--muted)
+        }
+
+        .values {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px
+        }
+
+        .value {
+            background: rgba(255, 255, 255, .75);
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: 600
+        }
+
+        .value span {
+            display: block;
+            color: var(--wine);
+            font-size: 1.35rem;
+            margin-bottom: 4px
+        }
+
+        .contact {
+            background: #fff
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 760px);
+            gap: 34px;
+            max-width: 900px
+        }
+
+        .contact h2 {
+            font: 400 clamp(2.3rem, 4vw, 3.3rem) var(--serif)
+        }
+
+        .contact p {
+            color: var(--muted)
+        }
+
+        .contact-list {
+            display: grid;
+            gap: 15px;
+            margin-top: 25px
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 13px;
+            align-items: flex-start
+        }
+
+        .contact-item b {
+            display: block
+        }
+
+        .contact-item a,
+        .contact-item span {
+            color: var(--muted);
+            text-decoration: none;
+            overflow-wrap: anywhere
+        }
+
+        .contact-item a:hover {
+            color: var(--wine)
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            flex: 0 0 40px;
+            display: grid;
+            place-items: center;
+            background: var(--soft);
+            border-radius: 50%;
+            color: var(--wine);
+            font-size: 1.1rem
+        }
+
+        .map-card {
+            background: transparent;
+            border: 0;
+            border-radius: 0;
+            padding: 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+            min-height: 0
+        }
+
+        .map-card .pin {
+            width: 40px;
+            height: 40px;
+            flex: 0 0 40px;
+            display: grid;
+            place-items: center;
+            background: var(--soft);
+            border-radius: 50%;
+            color: var(--wine);
+            font-size: 1.1rem
+        }
+
+        .map-card .location-copy {
+            flex: 1
+        }
+
+        .map-card h3 {
+            font: 600 1rem var(--sans);
+            margin: 0 0 2px
+        }
+
+        .map-card p {
+            margin: 0 0 14px;
+            color: var(--muted)
+        }
+
+        .map-card .btn {
+            display: inline-flex
+        }
+
+        footer {
+            padding: 25px 0;
+            border-top: 1px solid var(--line);
+            font-size: .86rem;
+            color: var(--muted)
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap
+        }
+
+        .footer-brand {
+            font: 1.2rem var(--serif);
+            color: var(--ink)
+        }
+
+
+        @media(max-width:760px) {
+            .whatsapp-float {
+                width: 54px;
+                height: 54px;
+                right: 17px;
+                bottom: 17px;
+                font-size: 25px;
+            }
+            .wrap {
+                width: min(100% - 30px, 600px)
+            }
+
+            nav {
+                display: none
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+                padding: 55px 0;
+                gap: 32px
+            }
+
+            .hero-art {
+                min-height: 300px;
+                max-width: 430px;
+                width: 100%;
+                margin: auto
+            }
+
+            .about-grid,
+            .service-grid,
+            .approach-inner,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 25px
+            }
+
+            .portrait-card {
+                min-height: auto
+            }
+
+            .section-head {
+                margin-bottom: 25px
+            }
+
+            section {
+                padding: 58px 0
+            }
+
+            .service-card {
+                padding: 23px
+            }
+
+            .values {
+                gap: 9px
+            }
+
+            .value {
+                padding: 14px;
+                font-size: .9rem
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            html {
+                scroll-behavior: auto
+            }
+
+            * {
+                transition: none !important
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="wrap hero" id="inicio">
+            <div>
+                <div class="eyebrow">Psicopedagogia · Neuropsicopedagogia</div>
+                <h1>Aprender é um caminho de <em>possibilidades.</em></h1>
+                <p>Neurociência para crianças, adolescentes e adultos. Acolhimento e estratégias individualizadas para
+                    compreender como cada pessoa aprende e favorecer seu desenvolvimento.</p>
+                <div class="hero-actions"><a class="btn whatsapp"
+                        href="https://wa.me/5548991397202?text=Olá%2C%20Gisele!%20Gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos."
+                        target="_blank" rel="noopener">Fale comigo pelo WhatsApp ↗</a><a class="btn outline"
+                        href="#servicos">Conheça os serviços</a></div>
+            </div>
+            <div class="hero-art" aria-label="Logótipo NEUROPDG">
+                <img src="logo.jpeg" alt="Logótipo NEUROPDG">
+            </div>
+        </section>
+        
+        <section class="about" id="sobre">
+            <div class="wrap about-grid">
+                <div class="portrait-card">
+                    <img src="Gisele.jpeg" alt="Gisele Geremias">
+                    <p>Gisele Geremias</p>
+                </div>
+                <div class="about-copy">
+                    <div class="eyebrow">Sobre mim</div>
+                    <h2>Conhecer a pessoa para compreender sua aprendizagem.</h2>
+                    <p>Meu nome é <strong>Gisele Geremias</strong>. Sou educadora e psicopedagoga, com atuação em
+                        Psicopedagogia e Neuropsicopedagogia.</p>
+                    <p>A Psicopedagogia busca compreender como a pessoa aprende e quais fatores podem estar relacionados às
+                        dificuldades no percurso escolar ou em outras situações de aprendizagem. A Neuropsicopedagogia
+                        considera também a relação entre cognição, desenvolvimento e aprendizagem, observando habilidades
+                        como atenção, memória, linguagem e funções executivas.</p>
+                    <p>O trabalho envolve avaliação, intervenção e orientação à família e à escola, com um olhar
+                        individualizado, respeitando a história, o ritmo e as necessidades de cada pessoa. Quando
+                        necessário, a atuação é articulada com outros profissionais.</p>
+                    <div class="pill-row"><span class="pill">Escuta acolhedora</span><span class="pill">Plano
+                            individualizado</span><span class="pill">Família e escola</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="servicos">
+            <div class="wrap">
+                <div class="section-head">
+                    <div class="eyebrow">Como posso ajudar</div>
+                    <h2>Serviços</h2>
+                    <p>Atendimentos para crianças, adolescentes e adultos, com objetivos definidos a partir das
+                        necessidades de cada pessoa. Selecione um serviço para saber mais.</p>
+                </div>
+                <div class="service-grid">
+                    <article class="service-card">
+                        <h3>Psicopedagogia</h3>
+                        <p>Compreensão e apoio aos processos de aprendizagem, com estratégias construídas de forma
+                            individualizada.</p>
+                        <details>
+                            <summary>Avaliação psicopedagógica</summary>
+                            <p>Investigação das dificuldades e potencialidades relacionadas à aprendizagem.</p>
+                        </details>
+                        <details>
+                            <summary>Intervenção psicopedagógica</summary>
+                            <p>Atendimento individualizado para crianças, adolescentes e adultos com dificuldades de
+                                aprendizagem.</p>
+                        </details>
+                        <details>
+                            <summary>Estimulação e desenvolvimento cognitivo</summary>
+                            <p>Atividades voltadas à atenção, memória, funções executivas, percepção, raciocínio e
+                                linguagem.</p>
+                        </details>
+                        <details>
+                            <summary>Alfabetização e letramento</summary>
+                            <p>Apoio para dificuldades na aquisição da leitura e escrita.</p>
+                        </details>
+                        <details>
+                            <summary>Intervenção em matemática</summary>
+                            <p>Apoio às dificuldades no raciocínio lógico-matemático e na aprendizagem dos conceitos
+                                matemáticos.</p>
+                        </details>
+                        <details>
+                            <summary>Acompanhamento escolar</summary>
+                            <p>Suporte para organização dos estudos, rotina, estratégias de aprendizagem e autonomia.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Orientação à família</summary>
+                            <p>Estratégias para favorecer a aprendizagem e o desenvolvimento em casa.</p>
+                        </details>
+                        <details>
+                            <summary>Orientação escolar</summary>
+                            <p>Diálogo com professores e escola para favorecer adaptações e estratégias pedagógicas.</p>
+                        </details>
+                    </article>
+                    <article class="service-card">
+                        <h3>Neuropsicopedagogia</h3>
+                        <p>Atuação sobre a relação entre funções cognitivas, desenvolvimento e aprendizagem, respeitando
+                            os limites profissionais.</p>
+                        <details>
+                            <summary>Avaliação neuropsicopedagógica</summary>
+                            <p>Investigação do funcionamento cognitivo relacionado aos processos de aprendizagem.</p>
+                        </details>
+                        <details>
+                            <summary>Dificuldades de aprendizagem e desenvolvimento</summary>
+                            <p>Investigação de dificuldades de aprendizagem e aspectos do desenvolvimento que possam
+                                estar relacionados a elas.</p>
+                        </details>
+                        <details>
+                            <summary>Avaliação de funções cognitivas</summary>
+                            <p>Observação de atenção, memória, linguagem, percepção, raciocínio e funções executivas.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Indicadores do neurodesenvolvimento</summary>
+                            <p>Investigação de indicadores relacionados ao TDAH, TEA e outros transtornos do
+                                neurodesenvolvimento, dentro dos limites da atuação profissional e em articulação com
+                                outros profissionais quando necessário.</p>
+                        </details>
+                        <details>
+                            <summary>Intervenção neuropsicopedagógica</summary>
+                            <p>Intervenção individualizada e estimulação cognitiva com atividades planejadas conforme o
+                                perfil e as necessidades da pessoa.</p>
+                        </details>
+                        <details>
+                            <summary>Desenvolvimento das funções executivas</summary>
+                            <p>Trabalho com planejamento, organização, controle inibitório, flexibilidade cognitiva e
+                                monitoramento.</p>
+                        </details>
+                        <details>
+                            <summary>Autorregulação e autonomia</summary>
+                            <p>Estratégias para apoiar a autorregulação e ampliar a autonomia no cotidiano e na
+                                aprendizagem.</p>
+                        </details>
+                        <details>
+                            <summary>Aprendizagem e neurodesenvolvimento</summary>
+                            <p>Intervenção nas dificuldades de aprendizagem associadas ao neurodesenvolvimento, com
+                                orientação familiar e escolar.</p>
+                        </details>
+                        <details>
+                            <summary>Relatórios e devolutivas</summary>
+                            <p>Elaboração de relatórios e devolutivas com resultados da avaliação e orientações.</p>
+                        </details>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contato">
+            <div class="wrap contact-grid">
+                <div>
+                    <div class="eyebrow">Vamos conversar?</div>
+                    <h2>Um primeiro contato pode abrir novos caminhos.</h2>
+                    <p>Entre em contato para tirar dúvidas sobre os atendimentos e verificar disponibilidade.</p>
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <div class="contact-icon">☎</div>
+                            <div><b>Telefone / WhatsApp</b><a href="https://wa.me/5548991397202" target="_blank"
+                                    rel="noopener">(48) 99139-7202</a></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉</div>
+                            <div><b>E-mail</b><a href="mailto:gisele.neuropdg@gmail.com">gisele.neuropdg@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">◎</div>
+                            <div><b>Instagram</b><a href="https://instagram.com/giseleneuropdg" target="_blank"
+                                    rel="noopener">@giseleneuropdg</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-card">
+                    <div class="pin">⌖</div>
+                    <div class="location-copy">
+                        <h3>Localização</h3>
+                        <p>Edifício Hogar Corporate<br>Av. Barão do Rio Branco, 350 — Sala 304<br>Centro · Palhoça · SC<br>CEP: 88130-100</p>
+                        <a class="btn outline"
+                            href="https://www.google.com/maps/search/?api=1&query=Edif%C3%ADcio%20Hogar%20Corporate%2C%20Av.%20Bar%C3%A3o%20do%20Rio%20Branco%2C%20350%2C%20Sala%20304%2C%20Palho%C3%A7a%2C%20SC"
+                            target="_blank" rel="noopener">Ver endereço no mapa ↗</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap footer-inner"><span class="footer-brand">GiseleNeuropdg</span><span>Neurociência para crianças,
+                adolescentes e adultos.</span><span>© 2026 Gisele Geremias</span></div>
+    </footer>
+
+    <a class="whatsapp-float"
+        href="https://wa.me/5548991397202?text=Olá%2C%20Gisele!%20Gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos."
+        target="_blank" rel="noopener" aria-label="Fale com Gisele pelo WhatsApp"
+        title="Fale comigo pelo WhatsApp">
+        <span aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="29" height="29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M16 3.2C8.93 3.2 3.2 8.93 3.2 16c0 2.26.59 4.39 1.71 6.25L3.05 28.95l6.87-1.8A12.73 12.73 0 0 0 16 28.8c7.07 0 12.8-5.73 12.8-12.8S23.07 3.2 16 3.2Zm0 23.35c-1.98 0-3.92-.53-5.62-1.53l-.4-.24-4.08 1.07 1.09-3.97-.26-.41A10.55 10.55 0 1 1 16 26.55Zm5.79-7.91c-.32-.16-1.89-.93-2.18-1.03-.29-.11-.5-.16-.71.16-.21.32-.82 1.03-1.01 1.24-.19.21-.37.24-.69.08-.32-.16-1.36-.5-2.59-1.59-.96-.86-1.61-1.92-1.8-2.24-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.72-.97-2.35-.26-.62-.52-.54-.71-.55h-.61c-.21 0-.56.08-.85.4-.29.32-1.11 1.09-1.11 2.66s1.14 3.08 1.3 3.29c.16.21 2.24 3.42 5.43 4.8.76.33 1.35.53 1.81.68.76.24 1.45.21 2 .13.61-.09 1.89-.77 2.16-1.51.27-.74.27-1.38.19-1.51-.08-.13-.29-.21-.61-.37Z"/>
+            </svg>
+        </span>
+    </a>
+
+</body>
+
+</html>
